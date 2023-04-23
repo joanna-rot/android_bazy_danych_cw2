@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
                     " " + k.getTelefon());
         }
 
-
+        Kontakt toChange = new Kontakt("Tomasz", "Igrekowski", "112");
+        toChange.setNr(6L);
+        zb.aktualizujKontakt(toChange);
+        for(Kontakt k:zb.dajWszystkie()) {
+            Log.d("DB", k.toString());
+        }
     }
+
 }
